@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background Styling in CSS - Tutorial</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loadingScreen">
+    <img id="loadingGif" src="" alt="Loading...">
+    <p>Loading, please wait...</p>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <!-- Basic Background Example -->
+    <div class="example">
+      <div class="code-display">
+        <pre><code>
+.background-basic {
+  background-color: #f0f8ff;
+  padding: 20px;
+  text-align: center;
+}
+        </code></pre>
+      </div>
+      <div class="output-display background-basic">Basic Background</div>
+    </div>
+
+    <!-- Background Image Example -->
+    <div class="example">
+      <div class="code-display">
+        <pre><code>
+.background-image {
+  background-image: url('Images/simplebg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px;
+  color: #000000;
+}
+        </code></pre>
+      </div>
+      <div class="output-display background-image">Background Image</div>
+    </div>
+
+    <!-- Background Position Example -->
+    <div class="example">
+      <div class="code-display">
+        <pre><code>
+.background-position {
+  background-image: url('Images/bg.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 100px;
+  color: #ffffff;
+}
+        </code></pre>
+      </div>
+      <div class="output-display background-position">Background Position</div>
+    </div>
+
+    <!-- Background Size Example -->
+    <div class="example">
+      <div class="code-display">
+        <pre><code>
+.background-size {
+  background-image: url('https://via.placeholder.com/300');
+  background-size: cover;
+  background-position: center;
+  padding: 60px;
+  color: #ffffff;
+}
+        </code></pre>
+      </div>
+      <div class="output-display background-size">Background Size</div>
+    </div>
+
+    <!-- Background Repeat Example -->
+    <div class="example">
+      <div class="code-display">
+        <pre><code>
+.background-repeat {
+  background-image: url('https://via.placeholder.com/50');
+  background-repeat: repeat;
+  padding: 60px;
+  color: #333333;
+}
+        </code></pre>
+      </div>
+      <div class="output-display background-repeat">Background Repeat</div>
+    </div>
+  </div>
+
+  <!-- Return to Main Page Button -->
+  <button class="return-button" onclick="goToMainPage()">Return to Main Page</button>
+
+  <script>
+    // Array of GIF URLs for random loading screen images
+    const gifUrls = [
+        'Images/gif/kurumi.gif',
+        'Images/gif/kurumi2.gif',
+        'Images/gif/kurumi3.gif'
+    ];
+
+    // Function to go to the main page with a loading screen
+    function goToMainPage() {
+      const loadingScreen = document.getElementById('loadingScreen');
+      const loadingGif = document.getElementById('loadingGif');
+
+      // Select a random GIF from the array and display it
+      const randomGif = gifUrls[Math.floor(Math.random() * gifUrls.length)];
+      loadingGif.src = randomGif;
+
+      // Show loading screen
+      loadingScreen.classList.add('active');
+
+      // Delay navigation to the main page
+      setTimeout(() => {
+        window.history.back(); // Replace with your main page URL
+      }, 1000); // Adjust delay as needed
+    }
+  </script>
+</body>
+</html>

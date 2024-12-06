@@ -1,0 +1,167 @@
+/* Flex Container Styles */
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+/* Example Output Style */
+.example {
+  flex: 1;
+}
+
+/* Code Display Style */
+.code {
+  flex: 1;
+  background-color: #f4f4f4;
+  padding: 20px;
+  font-family: monospace;
+  font-size: 0.9em;
+  color: #333;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+/* Loading Screen Styles */
+.loading-screen {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.loading-screen.active {
+  display: flex;
+}
+
+.loading-screen img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Return Button Style */
+.return-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #ffbbdd;
+  color: #5d4294;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.return-button:hover {
+  background-color: #f7c6d9;
+}
+
+/* Background Color Module */
+/* Sets a solid background color with padding and text alignment */
+.background-color {
+  background-color: #ffcc00; /* Set background color (e.g., #ffcc00 for yellow) */
+  padding: 20px; /* Adjust padding (e.g., 20px for spacing around content) */
+  text-align: center; /* Choose text alignment: center, left, or right */
+}
+
+/* Background Color with Fallback Module */
+/* Uses a solid color and gradient as fallback for background styling */
+.background-fallback {
+  background-color: #cccccc; /* Fallback solid color (e.g., light gray) */
+  
+  /* Background gradient as an alternative fallback */
+  background: linear-gradient(to right, #cccccc, #999999); /* Light gray to gray gradient */
+  
+  padding: 20px; /* Adjust padding for spacing */
+  text-align: center; /* Choose text alignment */
+  color: #fff; /* Set text color (e.g., white text for readability) */
+}
+
+/* RGB Hover Effect Module */
+/* Changes background color on hover using RGB values */
+.rgb-hover {
+  color: #000; /* Default text color (e.g., black) */
+}
+.rgb-hover:hover {
+  background-color: rgb(100, 150, 255); /* Light blue background on hover */
+}
+
+/* RGB Text Color Module */
+/* Sets text color using RGB values */
+.rgb-text {
+  color: rgb(34, 139, 34); /* Forest green text */
+}
+
+/* RGB Border Module */
+/* Creates a solid border using RGB values */
+.rgb-border {
+  border: 2px solid rgb(255, 69, 0); /* Red border */
+  padding: 10px; /* Adjust padding for spacing */
+  margin: 10px; /* Set margin around the border */
+}
+
+/* HSL Button Module */
+/* Defines button styling with HSL color and hover effect */
+.hsl-button {
+  background-color: hsl(120, 50%, 50%); /* Green button */
+  color: #fff; /* White text for readability */
+  padding: 10px 20px; /* Button padding */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Button font size */
+}
+.hsl-button:hover {
+  background-color: hsl(120, 50%, 40%); /* Darker green on hover */
+}
+
+/* HSL Gradient Module */
+/* Creates a gradient background with HSL values */
+.hsl-gradient {
+  background: linear-gradient(to right, hsl(200, 70%, 60%), hsl(220, 70%, 40%)); /* Blue gradient */
+  color: #fff; /* White text for readability */
+  padding: 20px; /* Adjust padding for spacing */
+  text-align: center; /* Centered text */
+}
+
+/* Hex Hover Text Color Module */
+/* Changes text color on hover using hex values */
+.hex-hover {
+  color: #333333; /* Default text color (e.g., dark gray) */
+}
+.hex-hover:hover {
+  color: #ff6600; /* Orange text color on hover */
+}
+
+/* Hex Color Background Module */
+/* Applies a solid background color using hex values */
+.hex-div {
+  background-color: #00ccff; /* Sky blue background */
+  padding: 20px; /* Adjust padding */
+  text-align: center; /* Centered text */
+  color: #fff; /* White text color for readability */
+}
+
+/* Hex Gradient Module */
+/* Creates a gradient background with hex values */
+.hex-gradient {
+  background: linear-gradient(to bottom, #ff66b2, #ffccff); /* Pink gradient */
+  padding: 20px; /* Adjust padding */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+}
+
+/* Button Text Color Module */
+/* Sets button text color using hex values */
+.button {
+  color: #00ccff; /* Sky blue text color */
+}
